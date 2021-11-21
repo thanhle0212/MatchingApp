@@ -1,0 +1,15 @@
+D:\Projects\MatchingApp\MatchingApp\bin\Debug\net5.0\MatchingApp.exe
+D:\Projects\MatchingApp\MatchingApp\bin\Debug\net5.0\MatchingApp.deps.json
+D:\Projects\MatchingApp\MatchingApp\bin\Debug\net5.0\MatchingApp.runtimeconfig.json
+D:\Projects\MatchingApp\MatchingApp\bin\Debug\net5.0\MatchingApp.runtimeconfig.dev.json
+D:\Projects\MatchingApp\MatchingApp\bin\Debug\net5.0\MatchingApp.dll
+D:\Projects\MatchingApp\MatchingApp\bin\Debug\net5.0\ref\MatchingApp.dll
+D:\Projects\MatchingApp\MatchingApp\bin\Debug\net5.0\MatchingApp.pdb
+D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.AssemblyInfoInputs.cache
+D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.AssemblyInfo.cs
+D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.csproj.CoreCompileInputs.cache
+D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.dll
+D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\ref\MatchingApp.dll
+D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.pdb
+D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.genruntimeconfig.cache
