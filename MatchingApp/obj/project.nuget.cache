@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fkGQKNoMATqn2MC41BoW0wLn/RsFvTDcy9UWobTpKV33jxI2jUOTQMTPffqQaVaiCFBmPRsqECgsWLFxS2B/ZQ==",
+  "dgSpecHash": "M6CHQPs5oE21ZtvMS5IFyG5NGTEgwtyDL+6KNw3W5RtAnKgt15mx60mxL8uppnbeCqf5f7HlwsuYbdhgwHxslA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\MatchingApp\\MatchingApp\\MatchingApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\thanhlet\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

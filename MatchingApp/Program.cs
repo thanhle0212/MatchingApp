@@ -1,46 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace MatchingApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            // Seeding Data
-            var input = new List<Order>
+            // Get Data
+            string fileName = "JsonFiles/input.json";
+            using FileStream openStream = File.OpenRead(fileName);
+            var deserializeOptions = new JsonSerializerOptions
             {
-                new Order{ Command = "sell", Price = 100.003, Amount = 2.4},
-                new Order{ Command = "buy", Price = 90.394, Amount = 3.445},
-                new Order{ Command = "buy", Price = 89.394, Amount = 4.3},
-                new Order{ Command = "sell", Price = 100.013, Amount = 2.2},
-                new Order{ Command = "buy", Price = 90.15, Amount = 1.305},
-                new Order{ Command = "buy", Price = 90.394, Amount = 1.0},
-                new Order{ Command = "sell", Price = 90.394, Amount = 2.2},
-                new Order{ Command = "sell", Price = 90.15, Amount = 3.4},
-                new Order{ Command = "buy", Price = 91.33, Amount = 1.8},
-                new Order{ Command = "buy", Price = 100.01, Amount = 4.0},
-                new Order{ Command = "sell", Price = 100.015, Amount = 3.8},
+                PropertyNameCaseInsensitive = true
             };
-
-            var matchingLogics = new MatchingLogics();
+            RootObject input = await JsonSerializer.DeserializeAsync<RootObject>(openStream, deserializeOptions);
 
             // Processing Data
-            var output = new List<Order>();
-            foreach (var order in input)
+            var matchingLogics = new MatchingLogics();
+            var outputMatchingData = new List<Order>();
+            foreach (var order in input.Orders)
             {
-                output = matchingLogics.MatchingData(output, order);
+                outputMatchingData = matchingLogics.MatchingData(outputMatchingData, order);
             }
 
             // Converting to Market Section data and grouping
-            var marketSections = new List<MarketSection>();
-            marketSections = matchingLogics.MarketSections(output);
+            var marketSections = matchingLogics.MarketSections(outputMatchingData);
+            var serializeOptions = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            };
 
             // Display data
-            foreach (var order in marketSections)
-            {
-                Console.WriteLine(order.Section + "-----" + order.Price + "-----" + order.Volume);
-            }
+            string jsonOutput = JsonSerializer.Serialize(marketSections, serializeOptions);
+            Console.WriteLine(jsonOutput);
             Console.ReadLine();
         }
     }

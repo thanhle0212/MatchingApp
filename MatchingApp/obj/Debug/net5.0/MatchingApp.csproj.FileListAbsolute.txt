@@ -13,3 +13,6 @@ D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.dll
 D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\ref\MatchingApp.dll
 D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.pdb
 D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.genruntimeconfig.cache
+D:\Projects\MatchingApp\MatchingApp\bin\Debug\net5.0\JsonFiles\input.json
+D:\Projects\MatchingApp\MatchingApp\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Projects\MatchingApp\MatchingApp\obj\Debug\net5.0\MatchingApp.csproj.CopyComplete

@@ -76,16 +76,16 @@ namespace MatchingApp
         /// </summary>
         /// <param name="orderList">List of current orders after matching</param>
         /// <returns>Buy and Sell section with ordering</returns>
-        public List<MarketSection> MarketSections(List<Order> orderList)
+        public MarketSection MarketSections(List<Order> orderList)
         {
             // Converting to Market Section data
             var marketSections = new List<MarketSection>();
-            var buySection = orderList.GroupBy(x => x.Price).Select(cl => new MarketSection { Price = cl.Key, Volume = cl.Sum(c => c.Amount), Section = cl.Select(x => x.Command).FirstOrDefault() }).Where(x => x.Section == "buy").OrderByDescending(x => x.Price).ToList();
-            var sellSection = orderList.GroupBy(x => x.Price).Select(cl => new MarketSection { Price = cl.Key, Volume = cl.Sum(c => c.Amount), Section = cl.Select(x => x.Command).FirstOrDefault() }).Where(x => x.Section == "sell").OrderBy(x => x.Price).ToList();
-            marketSections.AddRange(buySection);
-            marketSections.AddRange(sellSection);
-
-            return marketSections;
+            var output = new MarketSection();
+            var buySection = orderList.Where(x => x.Command == "buy").GroupBy(x => x.Price).Select(cl => new MarketValue { Price = cl.Key, Volume = cl.Sum(c => c.Amount) }).OrderByDescending(x => x.Price).ToList();
+            var sellSection = orderList.Where(x => x.Command == "sell").GroupBy(x => x.Price).Select(cl => new MarketValue { Price = cl.Key, Volume = cl.Sum(c => c.Amount)}).OrderBy(x => x.Price).ToList();
+            output.Buy = buySection;
+            output.Sell = sellSection;
+            return output;
         }
     }
 }

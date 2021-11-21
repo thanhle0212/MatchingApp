@@ -22,9 +22,24 @@ namespace MatchingApp.Tests
                 new Order{ Command = "buy", Price = 90.394, Amount = 3.445}
             };
 
-            var expectedResult = new List<MarketSection>{
-                new MarketSection{Section="buy", Price = 90.394, Volume = 3.445},
-                 new MarketSection{Section="sell", Price = 100.003, Volume = 2.4},
+            var expectedResult = new MarketSection
+            {
+                Buy = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 90.394,
+                        Volume = 3.445
+                    }
+                },
+                Sell = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 100.003,
+                        Volume = 2.4
+                    }
+                },
             };
 
             // Act and Assert
@@ -46,12 +61,39 @@ namespace MatchingApp.Tests
                 new Order{ Command = "buy", Price = 90.394, Amount = 1.0}
             };
 
-            var expectedResult = new List<MarketSection>{
-                new MarketSection{Section="buy", Price = 90.394, Volume = 4.445},
-                new MarketSection{Section="buy", Price = 90.15, Volume = 1.305},
-                new MarketSection{Section="buy", Price = 89.394, Volume = 4.3},
-                new MarketSection{Section="sell", Price = 100.003, Volume = 2.4},
-                new MarketSection{Section="sell", Price = 100.013, Volume = 2.2}
+            var expectedResult = new MarketSection
+            {
+                Buy = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 90.394,
+                        Volume = 4.445
+                    },
+                    new MarketValue
+                    {
+                        Price = 90.15,
+                        Volume = 1.305
+                    },
+                    new MarketValue
+                    {
+                        Price = 89.394,
+                        Volume = 4.3
+                    }
+                },
+                Sell = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 100.003,
+                        Volume = 2.4
+                    },
+                    new MarketValue
+                    {
+                        Price = 100.013,
+                        Volume = 2.2
+                    }
+                },
             };
 
             // Act and Assert
@@ -74,12 +116,39 @@ namespace MatchingApp.Tests
                 new Order{ Command = "sell", Price = 90.394, Amount = 2.2}
             };
 
-            var expectedResult = new List<MarketSection>{
-                new MarketSection{Section="buy", Price = 90.394, Volume = 2.245},
-                new MarketSection{Section="buy", Price = 90.15, Volume = 1.305},
-                new MarketSection{Section="buy", Price = 89.394, Volume = 4.3},
-                new MarketSection{Section="sell", Price = 100.003, Volume = 2.4},
-                new MarketSection{Section="sell", Price = 100.013, Volume = 2.2}
+            var expectedResult = new MarketSection
+            {
+                Buy = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 90.394,
+                        Volume = 2.245
+                    },
+                    new MarketValue
+                    {
+                        Price = 90.15,
+                        Volume = 1.305
+                    },
+                    new MarketValue
+                    {
+                        Price = 89.394,
+                        Volume = 4.3
+                    }
+                },
+                Sell = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 100.003,
+                        Volume = 2.4
+                    },
+                    new MarketValue
+                    {
+                        Price = 100.013,
+                        Volume = 2.2
+                    }
+                },
             };
 
             // Act and Assert
@@ -103,11 +172,34 @@ namespace MatchingApp.Tests
                 new Order{ Command = "sell", Price = 90.15, Amount = 3.4}
             };
 
-            var expectedResult = new List<MarketSection>{
-                new MarketSection{Section="buy", Price = 90.15, Volume = 0.15},
-                new MarketSection{Section="buy", Price = 89.394, Volume = 4.3},
-                new MarketSection{Section="sell", Price = 100.003, Volume = 2.4},
-                new MarketSection{Section="sell", Price = 100.013, Volume = 2.2}
+            var expectedResult = new MarketSection
+            {
+                Buy = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 90.15,
+                        Volume = 0.15
+                    },
+                    new MarketValue
+                    {
+                        Price = 89.394,
+                        Volume = 4.3
+                    }
+                },
+                Sell = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 100.003,
+                        Volume = 2.4
+                    },
+                    new MarketValue
+                    {
+                        Price = 100.013,
+                        Volume = 2.2
+                    }
+                },
             };
 
             // Act and Assert
@@ -132,12 +224,39 @@ namespace MatchingApp.Tests
                 new Order{ Command = "buy", Price = 91.33, Amount = 1.8},
             };
 
-            var expectedResult = new List<MarketSection>{
-                new MarketSection{Section="buy", Price = 91.33, Volume = 1.8},
-                new MarketSection{Section="buy", Price = 90.15, Volume = 0.15},
-                new MarketSection{Section="buy", Price = 89.394, Volume = 4.3},
-                new MarketSection{Section="sell", Price = 100.003, Volume = 2.4},
-                new MarketSection{Section="sell", Price = 100.013, Volume = 2.2}
+            var expectedResult = new MarketSection
+            {
+                Buy = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 91.33,
+                        Volume = 1.8
+                    },
+                    new MarketValue
+                    {
+                        Price = 90.15,
+                        Volume = 0.15
+                    },
+                    new MarketValue
+                    {
+                        Price = 89.394,
+                        Volume = 4.3
+                    }
+                },
+                Sell = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 100.003,
+                        Volume = 2.4
+                    },
+                    new MarketValue
+                    {
+                        Price = 100.013,
+                        Volume = 2.2
+                    }
+                },
             };
 
             // Act and Assert
@@ -163,12 +282,39 @@ namespace MatchingApp.Tests
                 new Order{ Command = "buy", Price = 100.01, Amount = 4.0},
             };
 
-            var expectedResult = new List<MarketSection>{
-                new MarketSection{Section="buy", Price = 100.01, Volume = 1.6},
-                new MarketSection{Section="buy", Price = 91.33, Volume = 1.8},
-                new MarketSection{Section="buy", Price = 90.15, Volume = 0.15},
-                new MarketSection{Section="buy", Price = 89.394, Volume = 4.3},
-                new MarketSection{Section="sell", Price = 100.013, Volume = 2.2}
+            var expectedResult = new MarketSection
+            {
+                Buy = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 100.01,
+                        Volume = 1.6
+                    },
+                    new MarketValue
+                    {
+                        Price = 91.33,
+                        Volume = 1.8
+                    },
+                    new MarketValue
+                    {
+                        Price = 90.15,
+                        Volume = 0.15
+                    },
+                    new MarketValue
+                    {
+                        Price = 89.394,
+                        Volume = 4.3
+                    }
+                },
+                Sell = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 100.013,
+                        Volume = 2.2
+                    }
+                }
             };
 
             // Act and Assert
@@ -195,20 +341,51 @@ namespace MatchingApp.Tests
                 new Order{ Command = "sell", Price = 100.015, Amount = 3.8},
             };
 
-            var expectedResult = new List<MarketSection>{
-                new MarketSection{Section="buy", Price = 100.01, Volume =1.6},
-                new MarketSection{Section="buy", Price = 91.33, Volume = 1.8},
-                new MarketSection{Section="buy", Price = 90.15, Volume = 0.15},
-                new MarketSection{Section="buy", Price = 89.394, Volume = 4.3},
-                new MarketSection{Section="sell", Price = 100.013, Volume = 2.2},
-                new MarketSection{Section="sell", Price = 100.015, Volume = 3.8}
+            var expectedResult = new MarketSection
+            {
+                Buy = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 100.01,
+                        Volume = 1.6
+                    },
+                    new MarketValue
+                    {
+                        Price = 91.33,
+                        Volume = 1.8
+                    },
+                    new MarketValue
+                    {
+                        Price = 90.15,
+                        Volume = 0.15
+                    },
+                    new MarketValue
+                    {
+                        Price = 89.394,
+                        Volume = 4.3
+                    }
+                },
+                Sell = new List<MarketValue>
+                {
+                    new MarketValue
+                    {
+                        Price = 100.013,
+                        Volume = 2.2
+                    },
+                    new MarketValue
+                    {
+                        Price = 100.015,
+                        Volume = 3.8
+                    }
+                },
             };
 
             // Act and Assert
             AssertData(input, expectedResult);
         }
 
-        private void AssertData(List<Order> input, List<MarketSection> expectedResult)
+        private void AssertData(List<Order> input, MarketSection expectedResult)
         {
 
             // Act
@@ -219,15 +396,20 @@ namespace MatchingApp.Tests
             }
 
             // Converting to Market Section data and grouping
-            var actualResult = new List<MarketSection>();
+            var actualResult = new MarketSection();
             actualResult = _matchingLogics.MarketSections(output);
 
             // Assert
-            for (int i = 0; i < expectedResult.Count; i++)
+            for (int i = 0; i < expectedResult.Buy.Count; i++)
             {
-                Assert.Equal(expectedResult[i].Section, actualResult[i].Section);
-                Assert.Equal(expectedResult[i].Volume, actualResult[i].Volume);
-                Assert.Equal(expectedResult[i].Price, actualResult[i].Price);
+                Assert.Equal(expectedResult.Buy[i].Volume, actualResult.Buy[i].Volume);
+                Assert.Equal(expectedResult.Buy[i].Price, actualResult.Buy[i].Price);
+            }
+
+            for (int i = 0; i < expectedResult.Sell.Count; i++)
+            {
+                Assert.Equal(expectedResult.Sell[i].Volume, actualResult.Sell[i].Volume);
+                Assert.Equal(expectedResult.Sell[i].Price, actualResult.Sell[i].Price);
             }
         }
     }
